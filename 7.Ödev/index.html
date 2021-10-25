@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <p><b>İlk Satırın çoğalmasını sağlayın</b> ve her çoğaldığında tr alanın rengi değişsin sil deyince bulunduğu alanı silsin. Her clone arttığında selectin namesini değişmesini sağlayın sorgu[1] > sorgu[2] şeklinde <a href="#cogalt" id="cogaltma"  class="btn btn-success">Çoğalt</a> buradaki butonla çoğaltılmasını sağlayabilirsiniz. Kolay gelsin :)
+  </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>İşlem</th>
+      </tr>
+    </thead>
+
+  
+
+
+    <tbody class="ekleme">
+
+      <tr class="table-primary" id="silin">
+        <td><select name="sorgu[1]">
+          <option value="0">Seçiniz</option>
+          <option value="0">Deneme</option>
+        </select></td>
+        <td>Joe</td>
+        <td>joe@example.com</td>
+        <td><a href="#cogalt" id="sil" class="btn btn-danger">Sil</a></td>
+      </tr>
+
+
+
+
+      <tr class="ekle" id="ilk">
+        <td><select name="sorgu[2]">
+          <option value="0">Seçiniz</option>
+          <option value="0">Deneme</option>
+        </select></td>
+        <td>Defaultson</td>
+        <td>def@somemail.com</td>
+        <td><a href="#cogalt"  class="sil2 btn btn-danger">Sil</a></td>
+      </tr>   
+
+     
+
+
+     </tbody>
+
+     
+
+   
+
+    
+  </table>
+</div>
+
+
+
+   
+
+     <script>
+         $(document).ready(function(){
+             $("#cogaltma").click(function(){
+               
+                  $(".ekle").css("background-color", "orange");
+                  $("#ilk").css("background-color","white");
+
+
+
+
+                  var eleman = $('tbody').find('tr').last().clone(true);
+                  var select = $(eleman).find('select');
+                  var selectName=$(select).attr('name');
+                  
+                  var parca = selectName.split('[')[1];
+                  parca=parca.split(']')[0];
+                  parca=parseInt(parca);
+                  var sayi=parca+1;
+                  var yeniSelectName='sorgu['+sayi+']';
+                  $(eleman).find('select').attr('name',yeniSelectName);
+                  console.log(eleman);
+                  $('tbody').append(eleman);
+                
+                 
+              
+                        
+                  
+                 
+                 
+             });
+
+
+             $("#sil").click(function(){
+                $("#silin").remove();
+               
+             });
+            
+          
+             $(".sil2").click(function () {
+               
+                $(this).closest(".ekleme > tr").remove();
+                
+            });
+          
+           // $(".sil2").click(function () {
+               
+            //   $(".ekle").closest("tr").remove();
+               
+          // });
+         
+             
+        });
+
+
+
+         
+
+
+
+
+         
+     </script>
+
+
+</body>
+</html>
