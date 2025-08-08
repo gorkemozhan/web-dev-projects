@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Real Estate Agency</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+   
+  }
+
+  .sıra {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+}
+
+
+.tablo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-image: url("images/website-background-3.jpg");
+  font-family:'Courier New', Courier, monospace;
+  font-style:italic;
+}
+
+
+ul {
+  display: inline-grid;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  margin: auto;
+}
+
+@media (min-width: 500px) {
+  ul {
+    grid-auto-flow: column;
+  }
+}
+
+
+
+
+li:last-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
+}
+
+/* below is just for demo styling */
+
+.foot {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color: #002a38;
+  line-height: 1.3;
+  font-family: Menlo, monospace;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+
+</style>
+</head>
+<body>
+   
+    <div style="padding: 20px 10px; overflow: hidden;">
+        <a style="text-decoration: none; padding-left: 80px;font-size: x-large;font-weight: bold;color: mediumturquoise;">Real Estate Agency</a>
+        <div style="float: right; text-align: center; display: block; font-size: x-large;">
+          <a href="#" style="padding-right: 50px;text-decoration: none;color: lightgrey;">Home</a>
+          <a href="#" style="padding-right: 50px;text-decoration: none;color: lightgrey;">Properties</a>
+          <a href="#" style="padding-right: 50px;text-decoration: none;color: lightgrey;">News</a>
+          <a href="#" style="padding-right: 50px;text-decoration: none;color: lightgrey;">Elements</a>
+          <a href="#" style="padding-right: 50px;text-decoration: none;color: lightgrey;">Gallery</a>
+          <a href="#" style="padding-right: 50px;text-decoration: none;color: lightgrey;">Contact</a>
+        </div>
+      </div>
+     
+      <div>
+      <div style="position: relative;">
+        <img src="images/1st.jpg" alt="Nature" style="width:100%; height: 600px;">
+        <div style="position: absolute; bottom: 20px; right: 20px; background-color: black; padding-left: 20px; padding-bottom: 20px; color:white; width: 500px ;">
+          <h3>Traditional Japanese House</h3>
+          <p>This house built like traditional ones and it has similiar properties</p>
+          <h3 style="color: firebrick;">125.000$          </h3>
+        </div>
+        </div>
+
+        <div style="padding-top: 20px; padding-left: 100px; padding-right: 100px; padding-bottom: 20px;clear: both;display: table; height: 100px;">
+            <div style="float: left; width: 33%; padding: 5px;   ">
+              <img src="images/2.jpg" alt="Snow" style="width:100%">
+            </div>
+            <div style="float: left; width: 33%; padding: 5px;  " >
+              <img src="images/3.jpg" alt="Forest" style="width:100%">
+            </div>
+            <div style="float: left; width: 33%; padding: 5px;">
+              <img src="images/4.jpg" alt="Mountains" style="width:100%">
+            </div>
+          </div>
+          
+
+  <div style="padding-top: 20px; padding-right: 100px; padding-bottom: 20px;clear: both;display: table;">
+            <div style="float: left; width: 27%; padding: 5px;  ">
+              <img src="images/home 1.jpg" alt="Snow" style="width:100%">
+              
+             
+              <figcaption style="text-align: center;background-color:cornflowerblue"><b style="color: red;">125.000$</b><br><b>16 Riverside Avenue</b><br>Balwyn North, Vic 3104<hr>500m²</figcaption>
+            </div>
+            <div style="float: left; width: 27%; padding: 5px;  " >
+              <img src="images/home 2.jpg" alt="Forest" style="width:100%">
+              <figcaption style="text-align: center;background-color:cornflowerblue"><b style="color: red;">125.000$</b><br><b>16 Riverside Avenue</b><br>Balwyn North, Vic 3104<hr>500m²</figcaption>
+            </div>
+            <div style="float: left; width: 27%; padding: 5px;">
+              <img src="images/home 3.jpg" alt="Mountains" style="width:100%">
+              <figcaption style="text-align: center;background-color:cornflowerblue"><b style="color: red;">125.000$</b><br><b>16 Riverside Avenue</b><br>Balwyn North, Vic 3104<hr>500m²</figcaption>
+            </div>
+          <div style="text-align: center;color: white;">AGENTS
+          <div style="font-weight: bolder;">  <img src="images/agent 1.jpg" style="height: 100px;width: 100px; float: left;"> Agent 1 <br> 222 455 000 <br>examp@gmail.com  </div>
+          <div style="padding-top: 50px;font-weight: bolder;">  <img src="images/agent 2.jpg" style="height: 100px;width: 100px; float: left;"> Agent 2 <br> 222 455 000 <br>examp@gmail.com  </div>
+          <div style="padding-top: 50px;font-weight: bolder;">  <img src="images/agent 3.jpg" style="height: 100px;width: 100px; float: left;"> Agent 3 <br> 222 455 000 <br>examp@gmail.com  </div>
+          </div>
+         </div>
+
+         
+
+
+         <div style="padding-top: 20px; padding-right: 100px; padding-bottom: 20px;clear: both;display: table;">
+          <div style="float: left; width: 27%; padding: 5px;  ">
+            <img src="images/home 4.jpg" alt="Snow" style="width:100%">
+            <figcaption style="text-align: center;background-color:cornflowerblue"><b style="color: red;">125.000$</b><br><b>16 Riverside Avenue</b><br>Balwyn North, Vic 3104<hr>500m²</figcaption>
+          </div>
+          <div style="float: left; width: 27%; padding: 5px;  " >
+            <img src="images/home 7.jpg" alt="Forest" style="width:100%">
+            <figcaption style="text-align: center;background-color:cornflowerblue"><b style="color: red;">125.000$</b><br><b>16 Riverside Avenue</b><br>Balwyn North, Vic 3104<hr>500m²</figcaption>
+          </div>
+          <div style="float: left; width: 27%; padding: 5px;">
+            <img src="images/home 6.jpg" alt="Mountains" style="width:100%">
+            <figcaption style="text-align: center;background-color:cornflowerblue"><b style="color: red;">125.000$</b><br><b>16 Riverside Avenue</b><br>Balwyn North, Vic 3104<hr>500m²</figcaption>
+          </div>
+          <form action="/action_page.php" style="float: right; color: white;">
+            <label for="fname">Country:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Home Type:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" value="Submit">
+          </form> 
+
+          
+        </div>
+
+
+        <div>
+          <img src="images/Capture.PNG" style="width: 1600px;">
+        </div>
+
+
+
+        <div class="tablo">
+          <div class="sıra" style="background-color:lightgray;text-align: center;">
+            <img src="images/team 1.jpg" style="float: right;height:250px;">
+            <h2>Who Are We?</h2>
+            <p>We are designers from all over the world to make sure you have safe and good-looking homes.</p>
+           
+          </div>
+          <div class="sıra" style="background-color: lightgray;text-align: center;">
+            <img src="images/team 2.jpg" style="float: left; height: 250px;">
+            <h2>Why Choose Us?</h2>
+            <p>Because we work really hard to achieve.</p>
+          </div>
+        </div>
+
+        
+
+        <div class="foot">
+          <ul>
+            <li><a href="#" style="text-decoration: none;">Twitter</a></li>
+            <li><a href="#" style="text-decoration: none;">Facebook</a></li>
+            <li><a href="#" style="text-decoration: none;">Email</a></li>
+            <li><a href="#" style="text-decoration: none;">Pinterest</a></li>
+            <li><a href="#" style="text-decoration: none;">Instagram</a></li>
+         
+          </ul>
+        </div>
+
+
+         
+          
+
+
+     
+      
+</body>
+</html>
